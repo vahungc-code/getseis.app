@@ -1,0 +1,142 @@
+/* getseis.app — the Seis brand on the web. Paper for the page, midnight for the hero and the
+   privacy band, blue for links and the one button. Display type Bricolage Grotesque, text
+   Instrument Sans, times and eyebrows Geist Mono. */
+:root {
+  --midnight: #0E2358;
+  --midnight-card: #15306B;
+  --paper: #F6F3F8;
+  --surface: #FFFFFF;
+  --ink: #0E2358;
+  --ink-2: #5B6480;
+  --hair: #D9DCE8;
+  --ink-on-dark: #F6F3F8;
+  --ink-2-on-dark: #A9B3D1;
+  --hair-on-dark: #27407A;
+  --blue: #2A62FF;
+  --blue-on-dark: #6E9BFF;
+  --red: #EE2C3C; --yellow: #D99500; --green: #00A14F; --purple: #9B3FE8;
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --text: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --max: 1080px;
+  --gutter: clamp(20px, 5vw, 48px);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--text); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 { font-family: var(--display); font-optical-sizing: auto; letter-spacing: -0.02em; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(40px, 7vw, 72px); font-weight: 800; line-height: 0.98; letter-spacing: -0.03em; }
+h2 { font-size: clamp(30px, 4.6vw, 48px); font-weight: 700; line-height: 1.04; }
+h3 { font-size: 22px; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+p { margin: 0; }
+.lede { font-size: clamp(18px, 2.2vw, 21px); line-height: 1.5; color: var(--ink-2); max-width: 36ch; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+.dark .eyebrow, .dark .lede { color: var(--ink-2-on-dark); }
+.in { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* Header */
+.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--midnight) 92%, transparent); backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px); color: var(--ink-on-dark); }
+.top .in { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.top nav { display: flex; gap: 22px; font-size: 15px; font-weight: 500; }
+.top nav a { color: var(--ink-on-dark); opacity: 0.85; }
+.top nav a:hover { opacity: 1; text-decoration: none; }
+.lockup { display: inline-flex; align-items: center; gap: 10px; color: inherit; }
+.lockup:hover { text-decoration: none; }
+.lockup svg { width: 30px; height: 30px; }
+
+/* The wordmark: Bricolage 800, opsz 96, -0.045em, lowercase, the i dotless with a blue dot drawn */
+.wm { font-family: var(--display); font-optical-sizing: auto; font-variation-settings: "opsz" 96; font-weight: 800; letter-spacing: -0.045em; line-height: 0.9; display: inline-block; white-space: nowrap; }
+.wm .i { position: relative; display: inline-block; }
+.wm .i::after { content: ""; position: absolute; left: 50%; top: 0.12em; width: 0.18em; height: 0.18em; margin-left: -0.09em; border-radius: 50%; background: var(--blue); }
+.top .wm { font-size: 26px; }
+
+/* Hero */
+.hero { background: var(--midnight); color: var(--ink-on-dark); overflow: hidden; }
+.hero .in { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(24px, 5vw, 64px); align-items: center; padding-top: clamp(48px, 8vw, 96px); padding-bottom: 0; }
+.hero .copy { display: grid; gap: 22px; padding-bottom: clamp(48px, 8vw, 96px); }
+.hero .ring { width: 72px; height: 72px; }
+.hero .lede { color: var(--ink-2-on-dark); }
+.cta { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 10px; background: var(--blue); color: #fff; font-weight: 600; font-size: 17px; padding: 14px 24px; border-radius: 999px; letter-spacing: 0.01em; }
+.btn:hover { text-decoration: none; background: #1F52E6; }
+.btn svg { width: 18px; height: 18px; }
+.hero .quiet { color: var(--ink-on-dark); opacity: 0.85; font-weight: 500; }
+.hero .quiet:hover { opacity: 1; }
+.hero .shot { align-self: end; }
+.hero .phone { margin: 0 auto; max-width: 360px; }
+
+/* A phone: the screenshot in a dark rounded shell, its foot cut by the band it sits in when it is the hero */
+.phone { border-radius: 52px; padding: 11px; background: #1d1d1f; box-shadow: 0 30px 80px rgba(14, 35, 88, 0.28); }
+.phone img { border-radius: 42px; }
+.hero .phone { border-bottom-left-radius: 0; border-bottom-right-radius: 0; padding-bottom: 0; box-shadow: 0 -10px 60px rgba(0,0,0,0.3); }
+.hero .phone img { border-bottom-left-radius: 0; border-bottom-right-radius: 0; max-height: 560px; object-fit: cover; object-position: top; }
+
+/* Bands and features */
+.band { padding: clamp(56px, 9vw, 112px) 0; }
+.band.hair { border-top: 1px solid var(--hair); }
+.band.dark { background: var(--midnight); color: var(--ink-on-dark); }
+.band.dark h2, .band.dark h3 { color: var(--ink-on-dark); }
+.band.dark p { color: var(--ink-2-on-dark); }
+.band.dark a { color: var(--blue-on-dark); }
+.head { display: grid; gap: 14px; max-width: 62ch; margin-bottom: clamp(32px, 5vw, 56px); }
+.head p { color: var(--ink-2); font-size: 18px; }
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--surface); border: 1px solid var(--hair); border-radius: 18px; padding: 26px 24px; display: grid; gap: 10px; align-content: start; }
+.card .n { font-family: var(--display); font-weight: 800; font-size: 20px; color: var(--blue); line-height: 1; }
+.card p { color: var(--ink-2); font-size: 16px; }
+.dark .card { background: var(--midnight-card); border-color: var(--hair-on-dark); }
+.dark .card p { color: var(--ink-2-on-dark); }
+
+.feature { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 6vw, 80px); align-items: center; }
+.feature + .feature { margin-top: clamp(56px, 9vw, 112px); }
+.feature.flip .copy { order: 2; }
+.feature .copy { display: grid; gap: 16px; max-width: 44ch; }
+.feature .copy p { color: var(--ink-2); font-size: 18px; }
+.feature .phone { max-width: 340px; margin: 0 auto; }
+.feature ul { margin: 0; padding-left: 20px; color: var(--ink-2); display: grid; gap: 6px; }
+
+/* Six dots, said once, as a sentence */
+.dots { display: inline-flex; gap: 8px; align-items: center; }
+.dots i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+
+/* Pages of text */
+.doc .in { max-width: 680px; padding-top: clamp(40px, 6vw, 72px); padding-bottom: clamp(56px, 9vw, 112px); }
+.doc h1 { font-size: clamp(34px, 5vw, 48px); letter-spacing: -0.025em; }
+.doc h2 { font-size: 24px; margin-top: 40px; margin-bottom: 10px; }
+.doc p, .doc li { color: var(--ink); font-size: 17px; }
+.doc .muted { color: var(--ink-2); margin-top: 8px; }
+.doc ul { padding-left: 22px; display: grid; gap: 8px; margin: 10px 0 0; }
+.doc p + p { margin-top: 10px; }
+.faq details { border-top: 1px solid var(--hair); padding: 16px 0; }
+.faq details:last-child { border-bottom: 1px solid var(--hair); }
+.faq summary { cursor: pointer; font-weight: 600; font-size: 18px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--blue); font-family: var(--display); font-weight: 700; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { margin-top: 10px; color: var(--ink-2); }
+
+/* Footer */
+footer { border-top: 1px solid var(--hair); padding: 40px 0 56px; color: var(--ink-2); font-size: 15px; }
+footer .in { display: grid; gap: 18px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 18px; }
+footer .lockup { color: var(--ink); }
+footer .lockup .wm { font-size: 22px; }
+
+@media (max-width: 820px) {
+  .hero .in { grid-template-columns: 1fr; }
+  .hero .copy { padding-bottom: 0; }
+  .hero .shot { margin-top: 36px; }
+  .hero .phone { max-width: 300px; }
+  .hero .phone img { max-height: 420px; }
+  .three { grid-template-columns: 1fr; }
+  .feature { grid-template-columns: 1fr; }
+  .feature.flip .copy { order: 0; }
+  .feature .phone { max-width: 280px; }
+  .top nav { gap: 16px; font-size: 14px; }
+}
+@media (max-width: 480px) {
+  .top nav a:not(.keep) { display: none; }
+}

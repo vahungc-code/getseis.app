@@ -7,8 +7,6 @@ Fonts come from Google Fonts; everything else is in this folder.
 
 - `APP_STORE_URL` (in all three pages): the App Store link, `https://apps.apple.com/app/id<APPLE_ID>`,
   known once the app record exists in App Store Connect (App Information › Apple ID).
-- `support@getseis.app`: make the mailbox exist (a forward at the registrar is enough), or change
-  the address in all three pages.
 - `© 2026 Nessa Studio` in the footer: the copyright name.
 - The App Store button is a plain brand button. Apple's official "Download on the App Store" badge
   can replace it once downloaded from developer.apple.com/app-store/marketing/guidelines (it may

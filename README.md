@@ -5,8 +5,8 @@ Fonts come from Google Fonts; everything else is in this folder.
 
 ## Placeholders to fill before going live
 
-- `APP_STORE_URL` (in all three pages): the App Store link, `https://apps.apple.com/app/id<APPLE_ID>`,
-  known once the app record exists in App Store Connect (App Information › Apple ID).
+- The App Store link in all three pages is `https://apps.apple.com/app/id6830645825` (the app's Apple ID
+  from App Store Connect › App Information); it answers 404 until the app is released.
 - `© 2026 Nessa Studio` in the footer: the copyright name.
 - The App Store button is a plain brand button. Apple's official "Download on the App Store" badge
   can replace it once downloaded from developer.apple.com/app-store/marketing/guidelines (it may

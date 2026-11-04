@@ -20,8 +20,11 @@ Fonts come from Google Fonts; everything else is in this folder.
    tick Enforce HTTPS once the certificate is issued (a few minutes after DNS resolves).
 3. At the registrar, DNS for `getseis.app`:
    - four A records at the apex (`@`): 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
-   - one CNAME for `www` → `<github-user>.github.io`
-4. In App Store Connect use `https://getseis.app/privacy.html` as the Privacy Policy URL and
+   - one CNAME for `www` → `vahungc-code.github.io` (the account's Pages host, never the
+     repository: GitHub picks the repository from the custom domain set in its Pages settings,
+     which the `CNAME` file in this folder sets to getseis.app)
+4. Live since 2026-11-04. GitHub's health check for the domain: `gh api repos/vahungc-code/getseis.app/pages/health`.
+5. In App Store Connect use `https://getseis.app/privacy.html` as the Privacy Policy URL and
    `https://getseis.app/support.html` as the Support URL.
 
 Any other static host (Cloudflare Pages, Netlify, Vercel) works the same: point it at this folder.
